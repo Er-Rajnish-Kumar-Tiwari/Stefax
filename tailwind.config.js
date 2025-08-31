@@ -18,7 +18,8 @@ export default {
       },
       height:{
         "section-hieght":'500px',
-      }
+      },
+      
     },
   },
   plugins: [],
