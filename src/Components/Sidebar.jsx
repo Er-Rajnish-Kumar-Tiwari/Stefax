@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FiHome, FiList, FiClock, FiCheckCircle, FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
 import { useNavigate, useLocation } from "react-router-dom";
+import { FiSettings } from "react-icons/fi";
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -26,27 +27,43 @@ const Sidebar = () => {
         <nav className="flex-1 p-4 space-y-2">
           <p
             onClick={() => navigate("/")}
-            className={`cursor-pointer flex items-center px-3 py-2 ${isActive("/")}`}
+            className={`cursor-pointer flex items-center px-3 py-2 ${isActive(
+              "/"
+            )}`}
           >
             <FiHome className="mr-2" /> Dashboard
           </p>
           <p
             onClick={() => navigate("/todo-training")}
-            className={`cursor-pointer flex items-center px-3 py-2 ${isActive("/todo-training")}`}
+            className={`cursor-pointer flex items-center px-3 py-2 ${isActive(
+              "/todo-training"
+            )}`}
           >
             <FiList className="mr-2" /> ToDo Training
           </p>
           <p
             onClick={() => navigate("/overdue")}
-            className={`cursor-pointer flex items-center px-3 py-2 ${isActive("/overdue")}`}
+            className={`cursor-pointer flex items-center px-3 py-2 ${isActive(
+              "/overdue"
+            )}`}
           >
             <FiClock className="mr-2" /> Overdue Training
           </p>
           <p
             onClick={() => navigate("/complete-training")}
-            className={`cursor-pointer flex items-center px-3 py-2 ${isActive("/complete-training")}`}
+            className={`cursor-pointer flex items-center px-3 py-2 ${isActive(
+              "/complete-training"
+            )}`}
           >
             <FiCheckCircle className="mr-2" /> Complete Training
+          </p>
+          <p
+            onClick={() => navigate("/setting")}
+            className={`cursor-pointer flex items-center px-3 py-2 ${isActive(
+              "/setting"
+            )}`}
+          >
+            <FiSettings className="mr-2" /> Settings
           </p>
         </nav>
       </div>
@@ -71,7 +88,9 @@ const Sidebar = () => {
                 navigate("/");
                 setOpen(false);
               }}
-              className={`cursor-pointer flex items-center px-3 py-2 ${isActive("/")}`}
+              className={`cursor-pointer flex items-center px-3 py-2 ${isActive(
+                "/"
+              )}`}
             >
               <FiHome className="mr-2" /> Dashboard
             </p>
@@ -80,7 +99,9 @@ const Sidebar = () => {
                 navigate("/todo-training");
                 setOpen(false);
               }}
-              className={`cursor-pointer flex items-center px-3 py-2 ${isActive("/todo-training")}`}
+              className={`cursor-pointer flex items-center px-3 py-2 ${isActive(
+                "/todo-training"
+              )}`}
             >
               <FiList className="mr-2" /> ToDo Training
             </p>
@@ -89,7 +110,9 @@ const Sidebar = () => {
                 navigate("/overdue");
                 setOpen(false);
               }}
-              className={`cursor-pointer flex items-center px-3 py-2 ${isActive("/overdue")}`}
+              className={`cursor-pointer flex items-center px-3 py-2 ${isActive(
+                "/overdue"
+              )}`}
             >
               <FiClock className="mr-2" /> Overdue Training
             </p>
@@ -98,9 +121,22 @@ const Sidebar = () => {
                 navigate("/complete-training");
                 setOpen(false);
               }}
-              className={`cursor-pointer flex items-center px-3 py-2 ${isActive("/complete-training")}`}
+              className={`cursor-pointer flex items-center px-3 py-2 ${isActive(
+                "/complete-training"
+              )}`}
             >
               <FiCheckCircle className="mr-2" /> Complete Training
+            </p>
+            <p
+              onClick={() => {
+                navigate("/setting");
+                setOpen(false);
+              }}
+              className={`cursor-pointer flex items-center px-3 py-2 ${isActive(
+                "/setting"
+              )}`}
+            >
+              <FiSettings className="mr-2" /> Settings
             </p>
           </div>
         )}

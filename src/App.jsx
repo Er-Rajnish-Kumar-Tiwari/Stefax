@@ -5,6 +5,7 @@ import TodoTraning from "./Pages/TodoTraning";
 import Overdue from "./Pages/Overdue";
 import Complete from "./Pages/Complete";
 import { Route, Routes } from "react-router-dom";
+import Setting from "./Pages/Setting";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/todo-training" element={<TodoTraning />} />
           <Route path="/overdue" element={<Overdue />} />
           <Route path="/complete-training" element={<Complete />} />
+          <Route path='/setting' element={<Setting />} />
         </Routes>
       </main>
     </div>
